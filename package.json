@@ -1,0 +1,23 @@
+{
+  "name": "central-compras",
+  "version": "1.0.0",
+  "description": "qualquer comercio ou serviço para salvar seus dados",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luizbarueri/central-compras.git"
+  },
+  "keywords": [],
+  "author": "Luiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luizbarueri/central-compras/issues"
+  },
+  "homepage": "https://github.com/luizbarueri/central-compras#readme",
+  "dependencies": {
+    "pg": "^8.11.3"
+  }
+}
