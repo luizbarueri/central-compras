@@ -1,8 +1,8 @@
 var pg = require('pg');
 //or native libpq bindings
 //var pg = require('pg').native
-
-var conString = "postgres://ddkpxdyr:lWuAUjv1fnAHTRq3wjrrUAGjjTkgVTcE@kesavan.db.elephantsql.com/ddkpxdyr" //Can be found in the Details page
+const urlPG = env("DATABASE_URL")
+var conString = urlPG //Can be found in the Details page
 var client = new pg.Client(conString);
 client.connect(function(err) {
   if(err) {
@@ -14,7 +14,8 @@ client.connect(function(err) {
       return console.error('error running query', err);
     }
     // console.log(result.rows[0].theTime);
-    console.log(result.rows[1]);
+    // console.log(result.rows[1]);
+    console.table(result.rows[1]);
     // >> output: 2018-08-23T14:02:57.117Z
     client.end();
   });
