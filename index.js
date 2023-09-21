@@ -1,7 +1,11 @@
+
+require('dotenv').config();
+
 var pg = require('pg');
 //or native libpq bindings
 //var pg = require('pg').native
-const urlPG = env("DATABASE_URL")
+const urlPG = process.env.DATABASE_URL;
+
 var conString = urlPG //Can be found in the Details page
 var client = new pg.Client(conString);
 client.connect(function(err) {
